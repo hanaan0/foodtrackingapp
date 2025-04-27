@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     marginTop: 80, // Space from the top of the screen
-    marginBottom: 20, // Space between the text and the image
+    marginBottom: 20, // Space between the text theimg
   },
   imageContainer: {
     marginBottom: 20, // Space between the image and additional content
