@@ -27,8 +27,8 @@ const WelcomeScreen = ({ navigation }) => {
 
     // Navigate to the next screen after the animation
     const timer = setTimeout(() => {
-      navigation.navigate("Home");
-    }, 1500);
+      navigation.navigate("BoardingScreen");
+    }, 1550);
 
     return () => clearTimeout(timer); // Cleanup timer
   }, [navigation]);
@@ -38,19 +38,14 @@ const WelcomeScreen = ({ navigation }) => {
       {/* Rings around the image */}
       <Animated.View style={[styles.ring, animatedStyle2]}>
         <Animated.View style={[styles.ring, animatedStyle1]}>
-          <Image
-            source={{
-              uri: "https://assets.apk.live/com.caloriescounter.tracker.healthy--6-icon.png",
-            }}
-            style={styles.image}
-          />
+          <Image source={require("../data/Logo.png")} style={styles.image} />
         </Animated.View>
       </Animated.View>
 
       {/* Title and punchline */}
       <View style={styles.textContainer}>
-        <Text style={styles.title}>Welcome to the Food App!</Text>
-        <Text style={styles.subtitle}>Food is always right</Text>
+        <Text style={styles.title}>Welcome to EcoBite!</Text>
+        <Text style={styles.subtitle}>Fresh Today, Sustainable Tomorrow.</Text>
       </View>
     </Screen>
   );
@@ -64,8 +59,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   image: {
-    width: 150,
-    height: 150,
+    width: 180,
+    height: 180,
   },
   textContainer: {
     marginTop: 20,
@@ -84,7 +79,6 @@ const styles = StyleSheet.create({
   },
   screen: {
     flex: 1,
-    backgroundColor: "#FFA500",
     alignItems: "center",
     justifyContent: "center",
   },

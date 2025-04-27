@@ -1,12 +1,8 @@
 import { StyleSheet, View, StatusBar } from "react-native";
 
-const Screen = ({ children }) => {
-  // Initialisations ---------------------
-  // State -------------------------------
-  // Handlers ----------------------------
-  // View --------------------------------
+const Screen = ({ children, style }) => {
   return (
-    <View style={styles.screen}>
+    <View style={[styles.screen, style]}>
       {children}
       <StatusBar style="auto" />
     </View>
@@ -16,9 +12,10 @@ const Screen = ({ children }) => {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: "#FFA500",
+    backgroundColor: "#8EB486",
     alignItems: "center",
     justifyContent: "center",
   },
 });
+
 export default Screen;

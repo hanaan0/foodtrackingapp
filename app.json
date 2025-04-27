@@ -6,23 +6,23 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hanaanmukhtar.food"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+      "package": "com.hanaanmukhtar.food"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "plugins": ["expo-barcode-scanner"],
+    "extra": {
+      "eas": {
+        "projectId": "0af569f6-b8ae-4ccf-aad8-b04351d03d1c"
+      }
     }
   }
 }
